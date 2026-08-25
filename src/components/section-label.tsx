@@ -1,0 +1,1 @@
+export function SectionLabel({ children }: { children: React.ReactNode }) { return <p className="eyebrow mb-8">{children}</p>; }

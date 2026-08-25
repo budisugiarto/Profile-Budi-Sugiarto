@@ -1,0 +1,5 @@
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+import { PageIntro } from '@/components/page-intro';
+const notes = [['Aug 2025', 'Designing for the question behind the request'], ['Jun 2025', 'What research taught me about shipping'], ['Mar 2025', 'Small systems, compounding clarity']];
+export default function Insight() { return <main><PageIntro number="07" title="Notes from the work." text="Catatan pendek tentang teknologi, pembelajaran, dan keputusan-keputusan kecil yang membentuk hasil besar." /><section className="shell py-20">{notes.map(([date, title]) => <Link href="/contact" key={title} className="group grid gap-4 border-t border-[#d8ddd7] py-7 md:grid-cols-[1fr_2fr_auto]"><span className="text-sm text-[#8aa83b]">{date}</span><h2 className="text-2xl font-medium">{title}</h2><ArrowUpRight className="text-[#61706b] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></Link>)}</section></main>; }
